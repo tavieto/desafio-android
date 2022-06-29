@@ -6,9 +6,6 @@ plugins {
 apply("./../../android-common.gradle")
 
 android {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
     buildFeatures {
         compose = true
     }
@@ -25,12 +22,20 @@ android {
 dependencies {
     val android = Dependencies.Android
     val compose = Dependencies.Compose
+    val core = Dependencies.Modules.Core
+    val external = Dependencies.External
 
-    implementation(android.CORE_KTK)
-    implementation(compose.CORE_UI)
-    implementation(compose.UI_PREVIEW)
-    implementation(compose.MATERIAL)
-    implementation(compose.ACTIVITY)
+    implementation(android.coreKtx)
+    implementation(compose.coreUi)
+    implementation(compose.uiPreview)
+    implementation(compose.material)
+    implementation(compose.activity)
+    implementation(external.koin)
+    implementation(external.koinAndroid)
+    implementation(external.koinCompose)
+
+    implementation(project(core.core))
+    implementation(project(core.design))
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test:runner:1.4.0")

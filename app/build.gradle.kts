@@ -15,9 +15,6 @@ android {
         versionName = AppConfig.VERSION_NAME
     }
 
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
     buildFeatures {
         compose = true
     }
@@ -34,14 +31,22 @@ android {
     dependencies {
         val android = Dependencies.Android
         val compose = Dependencies.Compose
+        val external = Dependencies.External
+        val features = Dependencies.Modules.Features
+        val core = Dependencies.Modules.Core
 
-        implementation(android.CORE_KTK)
-        implementation(compose.CORE_UI)
-        implementation(compose.UI_PREVIEW)
-        implementation(compose.MATERIAL)
-        implementation(compose.ACTIVITY)
-
-        implementation(project(":features:contacts"))
+        implementation(android.coreKtx)
+        implementation(compose.coreUi)
+        implementation(compose.uiPreview)
+        implementation(compose.material)
+        implementation(compose.activity)
+        implementation(external.koin)
+        implementation(external.koinAndroid)
+        implementation(project(features.contacts))
+        implementation(project(features.contacts))
+        implementation(project(core.core))
+        implementation(project(core.design))
+        implementation(project(core.navigation))
 
         implementation("com.squareup.retrofit2:retrofit:2.9.0")
         implementation("com.squareup.retrofit2:converter-gson:2.9.0")

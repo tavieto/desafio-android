@@ -16,6 +16,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Desafio Android"
+rootProject.name = "PicPay"
 include ':app'
 include ':features:contacts'
+include ':core:design'
+include ':core:core'
+include ':core:navigation'
