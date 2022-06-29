@@ -5,8 +5,28 @@ plugins {
 
 apply("../android-common.gradle")
 
+android {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.0"
+    }
+}
+
 dependencies {
-    implementation("androidx.core:core-ktx:1.8.0")
+    val android = Dependencies.Android
+    val compose = Dependencies.Compose
+
+    implementation(android.CORE_KTK)
+    implementation(compose.CORE_UI)
+    implementation(compose.UI_PREVIEW)
+    implementation(compose.MATERIAL)
+    implementation(compose.ACTIVITY)
+
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.2")
