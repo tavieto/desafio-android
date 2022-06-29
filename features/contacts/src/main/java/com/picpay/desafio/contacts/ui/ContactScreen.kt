@@ -1,4 +1,4 @@
-package com.picpay.desafio.android.ui
+package com.picpay.desafio.contacts.ui
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -14,7 +14,7 @@ private fun Content() {
     Text("Hello, World!")
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = false)
 @Composable
 fun ContentPreview() {
     Content()

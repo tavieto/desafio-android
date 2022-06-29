@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.picpay.desafio.android.ui.ContactScreen
+import com.picpay.desafio.contacts.ui.ContactScreen
 
 class MainActivity : ComponentActivity() {
 

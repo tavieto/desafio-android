@@ -6,6 +6,15 @@ plugins {
 apply("../android-common.gradle")
 
 android {
+
+    defaultConfig {
+        applicationId = AppConfig.APPLICATION_ID
+        minSdk = AppConfig.MIN_SDK_VERSION
+        targetSdk = AppConfig.TARGET_SDK_VERSION
+        versionCode = AppConfig.VERSION_CODE
+        versionName = AppConfig.VERSION_NAME
+    }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -31,6 +40,8 @@ android {
         implementation(compose.UI_PREVIEW)
         implementation(compose.MATERIAL)
         implementation(compose.ACTIVITY)
+
+        implementation(project(":features:contacts"))
 
         implementation("com.squareup.retrofit2:retrofit:2.9.0")
         implementation("com.squareup.retrofit2:converter-gson:2.9.0")
