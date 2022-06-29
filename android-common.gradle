@@ -1,7 +1,7 @@
 android {
     compileSdkVersion 32
     defaultConfig {
-        applicationId "com.picpay.desafio.a ndroid"
+        applicationId "com.picpay.desafio.android"
         minSdkVersion 23
         targetSdkVersion 32
         versionCode 1

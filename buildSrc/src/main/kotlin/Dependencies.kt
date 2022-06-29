@@ -7,6 +7,6 @@ object Dependencies {
         const val ACTIVITY                  = "androidx.activity:activity-compose:${Versions.Compose.ACTIVITY}"
         const val CORE_UI                   = "androidx.compose.ui:ui:${Versions.Compose.CORE_UI}"
         const val MATERIAL                  = "androidx.compose.material:material:${Versions.Compose.CORE_UI}"
-        const val UI_PREVIEW                = "androidx.compose.ui:ui-tooling-preview:${Versions.Compose.CORE_UI}"
+        const val UI_PREVIEW                = "androidx.compose.ui:ui-tooling:${Versions.Compose.CORE_UI}"
     }
 }
