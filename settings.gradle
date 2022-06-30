@@ -8,9 +8,16 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
         mavenCentral()
+        google()
     }
 }
 rootProject.name = "PicPay"
 include ':app'
+include ':core:commons'
+include ':core:core'
+include ':core:design'
+include ':core:navigation'
+include ':features:contact'
+include ':domain'
+include ':domain:contact'
