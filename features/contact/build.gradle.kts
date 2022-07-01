@@ -12,19 +12,15 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.1.0"
     }
-    packagingOptions {
-        resources {
-            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
-        }
-    }
 }
 
 dependencies {
-    val android = Dependencies.Android
-    val compose = Dependencies.Compose
-    val core = Dependencies.Modules.Core
-    val domain = Dependencies.Modules.Domain
-    val external = Dependencies.External
+    val android     = Dependencies.Android
+    val compose     = Dependencies.Compose
+    val core        = Dependencies.Modules.Core
+    val domain      = Dependencies.Modules.Domain
+    val external    = Dependencies.External
+    val test        = Dependencies.Test
 
     implementation(android.coreKtx)
     implementation(compose.coreUi)
@@ -38,7 +34,12 @@ dependencies {
     implementation(project(core.design))
     implementation(project(domain.contact))
 
-    testImplementation("junit:junit:4.13.2")
+    testImplementation(test.mockK)
+    testImplementation(test.jUnit)
+    testImplementation(test.coreTest)
+    testImplementation(test.coroutinesTest)
+    testImplementation(test.coroutinesAndroid)
+
     androidTestImplementation("androidx.test:runner:1.4.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation("androidx.test:core-ktx:1.4.0")

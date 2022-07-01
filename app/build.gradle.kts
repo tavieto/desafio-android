@@ -21,19 +21,17 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.1.0"
     }
-    packagingOptions {
-        resources {
-            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
-        }
-    }
 }
 
 dependencies {
-    val android = Dependencies.Android
-    val compose = Dependencies.Compose
-    val external = Dependencies.External
-    val features = Dependencies.Modules.Features
-    val core = Dependencies.Modules.Core
+    val android     = Dependencies.Android
+    val compose     = Dependencies.Compose
+    val core        = Dependencies.Modules.Core
+    val data        = Dependencies.Modules.Data
+    val domain      = Dependencies.Modules.Domain
+    val external    = Dependencies.External
+    val features    = Dependencies.Modules.Features
+    val modules     = Dependencies.Modules
 
     implementation(android.coreKtx)
     implementation(compose.coreUi)
@@ -42,14 +40,15 @@ dependencies {
     implementation(compose.activity)
     implementation(external.koin)
     implementation(external.koinAndroid)
-    implementation(project(features.contact))
+    implementation(external.koinCompose)
     implementation(project(core.core))
     implementation(project(core.design))
     implementation(project(core.navigation))
-
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:okhttp:4.9.2")
+    implementation(project(data.local))
+    implementation(project(data.network))
+    implementation(project(domain.contact))
+    implementation(project(features.contact))
+    implementation(project(modules.repository))
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test:runner:1.4.0")

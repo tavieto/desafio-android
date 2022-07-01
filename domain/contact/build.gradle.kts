@@ -1,15 +1,12 @@
 plugins {
-    id("java-library")
-    id("org.jetbrains.kotlin.jvm")
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    id("kotlin")
+    id("kotlin-kapt")
 }
 
 dependencies {
-    val core = Dependencies.Modules.Core
+    val core        = Dependencies.Modules.Core
+    val external    = Dependencies.External
 
+    implementation(external.koin)
     implementation(project(core.commons))
 }

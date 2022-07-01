@@ -26,5 +26,5 @@ dependencies {
     api(compose.uiPreview)
     api(compose.material)
     api(compose.activity)
-    api(external.GLIDE)
+    api(external.glide)
 }

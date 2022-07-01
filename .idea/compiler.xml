@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.7">
-      <module name="desafio-android.buildSrc" target="11" />
-      <module name="desafio-android.buildSrc.main" target="11" />
-      <module name="desafio-android.buildSrc.test" target="11" />
-      <module name="PicPay.app" target="11" />
+    <bytecodeTargetLevel target="11">
       <module name="PicPay.contact" target="11" />
-      <module name="PicPay.core.core" target="11" />
-      <module name="PicPay.core.design" target="11" />
-      <module name="PicPay.core.navigation" target="11" />
-      <module name="PicPay.features.contact" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
-import com.picpay.desafio.design.theme.PicPayTheme.colors
-import com.picpay.desafio.design.theme.PicPayTheme.spacing
+import com.picpay.desafio.android.design.theme.PicPayTheme.colors
+import com.picpay.desafio.android.design.theme.PicPayTheme.spacing
 import com.skydoves.landscapist.CircularReveal
 import com.skydoves.landscapist.glide.GlideImage
 
@@ -62,13 +62,4 @@ fun ItemContact(
         }
         Spacer(modifier = Modifier.width(spacing.xxs))
     }
-}
-
-@Composable
-fun ItemContactPreview() {
-    ItemContact(
-        name = "Otávio",
-        username = "tavieto",
-        photo = ""
-    ) {}
 }

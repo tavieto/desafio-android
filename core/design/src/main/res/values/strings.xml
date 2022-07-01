@@ -2,4 +2,5 @@
 <resources>
     <string name="content_contacts_title">Contato</string>
     <string name="content_contacts_username">"@"%1s</string>
+    <string name="error_contacts_default">Ocorreu um erro. Tente novamente</string>
 </resources>

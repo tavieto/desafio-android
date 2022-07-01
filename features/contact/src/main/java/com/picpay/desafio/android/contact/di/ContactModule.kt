@@ -1,11 +1,9 @@
 package com.picpay.desafio.android.contact.di
 
-import com.picpay.desafio.android.contact.usecase.GetContactsUseCase
-import kotlinx.coroutines.CoroutineScope
+import com.picpay.desafio.android.contact.ui.ContactViewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-val domainContactModule = module {
-    factory { (scope: CoroutineScope) ->
-        GetContactsUseCase(scope)
-    }
+val featureContactModel = module {
+    viewModel { ContactViewModel() }
 }

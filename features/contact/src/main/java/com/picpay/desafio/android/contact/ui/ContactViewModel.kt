@@ -4,11 +4,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.picpay.desafio.android.contact.mapper.fromDomain
-import com.picpay.desafio.android.contact.ui.ContactViewAction.Get
-import com.picpay.desafio.android.contact.ui.ContactViewAction.Navigate
+import com.picpay.desafio.android.contact.data.mapper.fromDomain
+import com.picpay.desafio.android.contact.ui.ContactViewAction.*
+import com.picpay.desafio.android.contact.ui.ContactViewAction.Set
 import com.picpay.desafio.android.contact.usecase.GetContactsUseCase
-import com.picpay.desafio.core.delegate.useCase
+import com.picpay.desafio.android.core.delegate.useCase
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
@@ -21,12 +21,20 @@ class ContactViewModel : ViewModel(), KoinComponent {
 
     fun dispatchAction(viewAction: ContactViewAction) {
         when (viewAction) {
-            Get.Contacts -> getContacts()
-            Navigate.Details -> navigateDetails()
+            is Clear.Error.Unexpected -> clearErrorUnexpected()
+            is Get.Contacts -> getContacts()
+            is Navigate.Details -> navigateDetails()
+            is Set.Initialization -> setInitialization()
         }
     }
 
+    private fun clearErrorUnexpected() {
+        viewState = viewState.copy(unexpectedError = null)
+    }
+
     private fun getContacts() {
+        dispatchAction(Clear.Error.Unexpected)
+        viewState = viewState.copy(isLoading = true)
         getContacts(
             onSuccess = { contacts ->
                 viewState = viewState.copy(
@@ -36,7 +44,8 @@ class ContactViewModel : ViewModel(), KoinComponent {
             },
             onFailure = {
                 viewState = viewState.copy(
-                    isLoading = false
+                    isLoading = false,
+                    unexpectedError = it
                 )
             }
         )
@@ -44,5 +53,9 @@ class ContactViewModel : ViewModel(), KoinComponent {
 
     private fun navigateDetails() {
         navigation.details()
+    }
+
+    private fun setInitialization() {
+        viewState = viewState.copy(isInitialized = true)
     }
 }

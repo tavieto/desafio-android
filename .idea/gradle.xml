@@ -17,10 +17,14 @@
             <option value="$PROJECT_DIR$/core/core" />
             <option value="$PROJECT_DIR$/core/design" />
             <option value="$PROJECT_DIR$/core/navigation" />
+            <option value="$PROJECT_DIR$/data" />
+            <option value="$PROJECT_DIR$/data/local" />
+            <option value="$PROJECT_DIR$/data/network" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/domain/contact" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/contact" />
+            <option value="$PROJECT_DIR$/repository" />
           </set>
         </option>
       </GradleProjectSettings>
