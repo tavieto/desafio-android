@@ -4,8 +4,8 @@ plugins {
 }
 
 dependencies {
-    val modules         = Dependencies.Modules
-    val external        = Dependencies.External
+    val modules     = Dependencies.Modules
+    val external    = Dependencies.External
 
     implementation(external.gson)
     implementation(external.koin)

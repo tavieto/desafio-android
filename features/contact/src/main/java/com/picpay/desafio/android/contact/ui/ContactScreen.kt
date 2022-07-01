@@ -20,7 +20,7 @@ import com.picpay.desafio.android.contact.component.ItemContact
 import com.picpay.desafio.android.contact.data.model.Contact
 import com.picpay.desafio.android.contact.ui.ContactViewAction.*
 import com.picpay.desafio.android.contact.ui.ContactViewAction.Set
-import com.picpay.desafio.design.R.string.*
+import com.picpay.desafio.android.design.R.string.*
 import com.picpay.desafio.android.design.theme.PicPayTheme
 import com.picpay.desafio.android.design.theme.PicPayTheme.colors
 import com.picpay.desafio.android.design.theme.PicPayTheme.spacing

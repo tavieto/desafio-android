@@ -16,10 +16,10 @@ android {
 
 dependencies {
 
-    val android = Dependencies.Android
-    val compose = Dependencies.Compose
-    val core = Dependencies.Modules.Core
-    val external = Dependencies.External
+    val android     = Dependencies.Android
+    val compose     = Dependencies.Compose
+    val core        = Dependencies.Modules.Core
+    val external    = Dependencies.External
 
     api(android.coreKtx)
     api(android.viewModel)

@@ -16,9 +16,9 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$roomVersion")
 
-    val android = Dependencies.Android
-    val external = Dependencies.External
-    val modules = Dependencies.Modules
+    val android     = Dependencies.Android
+    val external    = Dependencies.External
+    val modules     = Dependencies.Modules
 
     implementation(android.coreKtx)
     implementation(external.koin)

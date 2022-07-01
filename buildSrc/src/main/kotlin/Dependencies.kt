@@ -7,6 +7,9 @@ object Dependencies {
         const val activity                      = "androidx.activity:activity-compose:${Versions.Compose.activity}"
         const val coreUi                        = "androidx.compose.ui:ui:${Versions.Compose.coreUi}"
         const val material                      = "androidx.compose.material:material:${Versions.Compose.coreUi}"
+        const val navigation                    = "androidx.navigation:navigation-compose:${Versions.Compose.navigation}"
+        const val navigationAnimation           = "com.google.accompanist:accompanist-navigation-animation:${Versions.Compose.navigationAnimation}"
+        const val navigationCommon              = "androidx.navigation:navigation-common-ktx:${Versions.Compose.navigation}"
         const val uiPreview                     = "androidx.compose.ui:ui-tooling:${Versions.Compose.coreUi}"
     }
     object External {
@@ -19,6 +22,7 @@ object Dependencies {
         const val okHttp                        = "com.squareup.okhttp3:okhttp:${Versions.External.okHttp}"
         const val okHttpLogging                 = "com.squareup.okhttp3:logging-interceptor:${Versions.External.okHttp}"
         const val retrofit                      = "com.squareup.retrofit2:retrofit:${Versions.External.retrofit}"
+
     }
     object Modules {
         const val repository                    = ":repository"

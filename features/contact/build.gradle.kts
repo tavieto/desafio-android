@@ -37,8 +37,6 @@ dependencies {
     testImplementation(test.mockK)
     testImplementation(test.jUnit)
     testImplementation(test.coreTest)
-    testImplementation(test.coroutinesTest)
-    testImplementation(test.coroutinesAndroid)
 
     androidTestImplementation("androidx.test:runner:1.4.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
