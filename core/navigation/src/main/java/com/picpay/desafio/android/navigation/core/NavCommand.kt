@@ -1,4 +1,4 @@
-package com.picpay.desafio.navigation.core
+package com.picpay.desafio.android.navigation.core
 
 import androidx.navigation.NavOptions
 

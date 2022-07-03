@@ -1,9 +1,9 @@
-package com.picpay.desafio.navigation.navigation
+package com.picpay.desafio.android.navigation.navigation
 
 import com.picpay.desafio.android.contact.data.model.Contact
 import com.picpay.desafio.android.contact.ui.ContactNavigation
-import com.picpay.desafio.navigation.core.NavManager
-import com.picpay.desafio.navigation.destination.LeafDestination
+import com.picpay.desafio.android.navigation.core.NavManager
+import com.picpay.desafio.android.navigation.destination.LeafDestination
 
 class ContactNavigationImpl(
     private val navManager: NavManager

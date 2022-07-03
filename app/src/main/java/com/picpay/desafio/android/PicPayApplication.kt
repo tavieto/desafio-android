@@ -6,7 +6,7 @@ import com.picpay.desafio.android.contact.di.featureContactModel
 import com.picpay.desafio.android.local.di.localModule
 import com.picpay.desafio.android.network.di.networkModule
 import com.picpay.desafio.android.repository.di.repositoryModule
-import com.picpay.desafio.navigation.di.navigationModule
+import com.picpay.desafio.android.navigation.di.navigationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

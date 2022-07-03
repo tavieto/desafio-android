@@ -11,10 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.picpay.desafio.android.design.theme.PicPayTheme
-import com.picpay.desafio.navigation.core.NavCommand
-import com.picpay.desafio.navigation.core.NavManager
-import com.picpay.desafio.navigation.core.NavigationType
-import com.picpay.desafio.navigation.graph.AppNavigation
+import com.picpay.desafio.android.navigation.core.NavCommand
+import com.picpay.desafio.android.navigation.core.NavManager
+import com.picpay.desafio.android.navigation.core.NavigationType
+import com.picpay.desafio.android.navigation.graph.AppNavigation
 
 class MainActivity : ComponentActivity() {
 

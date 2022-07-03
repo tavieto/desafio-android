@@ -1,7 +1,7 @@
 package com.picpay.desafio.android
 
 import androidx.lifecycle.ViewModel
-import com.picpay.desafio.navigation.core.NavManager
+import com.picpay.desafio.android.navigation.core.NavManager
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

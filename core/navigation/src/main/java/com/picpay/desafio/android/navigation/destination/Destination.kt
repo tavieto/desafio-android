@@ -1,11 +1,11 @@
-package com.picpay.desafio.navigation.destination
+package com.picpay.desafio.android.navigation.destination
 
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.navArgument
 import com.google.gson.Gson
 import com.picpay.desafio.android.contact.data.model.Contact
 import com.picpay.desafio.android.core.extension.encode
-import com.picpay.desafio.navigation.core.ArgNavType
+import com.picpay.desafio.android.navigation.core.ArgNavType
 
 sealed class Destination(val route: String) {
     object Contacts : Destination(route = "contacts")

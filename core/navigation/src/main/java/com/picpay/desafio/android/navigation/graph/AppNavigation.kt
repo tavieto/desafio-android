@@ -1,11 +1,10 @@
-package com.picpay.desafio.navigation.graph
+package com.picpay.desafio.android.navigation.graph
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import com.picpay.desafio.navigation.destination.Destination
-import com.picpay.desafio.navigation.destination.LeafDestination
+import com.picpay.desafio.android.navigation.destination.Destination
 
 @Composable
 fun AppNavigation(
