@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.picpay.desafio.android.contact.data.mapper.fromDomain
+import com.picpay.desafio.android.contact.data.model.Contact
 import com.picpay.desafio.android.contact.ui.ContactViewAction.*
 import com.picpay.desafio.android.contact.ui.ContactViewAction.Set
 import com.picpay.desafio.android.contact.usecase.GetContactsUseCase
@@ -23,7 +24,8 @@ class ContactViewModel : ViewModel(), KoinComponent {
         when (viewAction) {
             is Clear.Error.Unexpected -> clearErrorUnexpected()
             is Get.Contacts -> getContacts()
-            is Navigate.Details -> navigateDetails()
+            is Navigate.Details -> navigateDetails(viewAction.contact)
+            is Navigate.PopBackStack -> navigatePopBackStack()
             is Set.Initialization -> setInitialization()
         }
     }
@@ -51,8 +53,12 @@ class ContactViewModel : ViewModel(), KoinComponent {
         )
     }
 
-    private fun navigateDetails() {
-        navigation.details()
+    private fun navigateDetails(contact: Contact) {
+        navigation.test(contact = contact)
+    }
+
+    private fun navigatePopBackStack() {
+        navigation.popBackStack()
     }
 
     private fun setInitialization() {

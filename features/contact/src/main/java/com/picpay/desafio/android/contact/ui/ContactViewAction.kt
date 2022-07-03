@@ -1,5 +1,7 @@
 package com.picpay.desafio.android.contact.ui
 
+import com.picpay.desafio.android.contact.data.model.Contact
+
 sealed class ContactViewAction {
     object Clear {
         object Error {
@@ -10,7 +12,8 @@ sealed class ContactViewAction {
         object Contacts : ContactViewAction()
     }
     object Navigate {
-        object Details : ContactViewAction()
+        data class Details(val contact: Contact) : ContactViewAction()
+        object PopBackStack : ContactViewAction()
     }
     object Set {
         object Initialization : ContactViewAction()

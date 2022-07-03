@@ -18,7 +18,7 @@ object Dependencies {
         const val gson                          = "com.squareup.retrofit2:converter-gson:${Versions.External.retrofit}"
         const val koin                          = "io.insert-koin:koin-core:${Versions.External.koin}"
         const val koinAndroid                   = "io.insert-koin:koin-android:${Versions.External.koin}"
-        const val koinCompose                   = "io.insert-koin:koin-android:${Versions.External.koin}"
+        const val koinCompose                   = "io.insert-koin:koin-androidx-compose:${Versions.External.koin}"
         const val okHttp                        = "com.squareup.okhttp3:okhttp:${Versions.External.okHttp}"
         const val okHttpLogging                 = "com.squareup.okhttp3:logging-interceptor:${Versions.External.okHttp}"
         const val retrofit                      = "com.squareup.retrofit2:retrofit:${Versions.External.retrofit}"

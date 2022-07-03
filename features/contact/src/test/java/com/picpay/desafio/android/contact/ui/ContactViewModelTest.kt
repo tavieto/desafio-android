@@ -1,6 +1,7 @@
 package com.picpay.desafio.android.contact.ui
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.picpay.desafio.android.contact.ui.ContactFactory.CONTACT
 import com.picpay.desafio.android.contact.ui.ContactViewAction.*
 import com.picpay.desafio.android.contact.ui.ContactViewAction.Set
 import com.picpay.desafio.android.contact.usecase.GetContactsUseCase
@@ -72,11 +73,20 @@ internal class ContactViewModelTest {
 
     @Test
     fun `WHEN dispatch Navigate_Details action MUST call navigation once`() {
-        every { navigation.details() } returns Unit
+        every { navigation.test(any()) } returns Unit
 
-        action(Navigate.Details)
+        action(Navigate.Details(CONTACT))
 
-        verify(exactly = 1) { navigation.details() }
+        verify(exactly = 1) { navigation.test(any()) }
+    }
+
+    @Test
+    fun `WHEN dispatch Navigate_PopBackStack action MUST call navigation once`() {
+        every { navigation.popBackStack() } returns Unit
+
+        action(Navigate.PopBackStack)
+
+        verify(exactly = 1) { navigation.popBackStack() }
     }
 
     @Test

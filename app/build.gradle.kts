@@ -33,11 +33,13 @@ dependencies {
     val features    = Dependencies.Modules.Features
     val modules     = Dependencies.Modules
 
+    implementation(compose.activity)
     implementation(android.coreKtx)
     implementation(compose.coreUi)
-    implementation(compose.uiPreview)
     implementation(compose.material)
-    implementation(compose.activity)
+    implementation(compose.navigation)
+    implementation(compose.uiPreview)
+
     implementation(external.koin)
     implementation(external.koinAndroid)
     implementation(external.koinCompose)

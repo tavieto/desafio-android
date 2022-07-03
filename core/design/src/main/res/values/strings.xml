@@ -3,4 +3,10 @@
     <string name="content_contacts_title">Contato</string>
     <string name="content_contacts_username">"@"%1s</string>
     <string name="error_contacts_default">Ocorreu um erro. Tente novamente</string>
+
+    <string name="content_test_hello">Olá, PicPay! &lt;3</string>
+    <string name="content_test_username">"@"%1s</string>
+    <string name="content_test_name">%1s</string>
+    <string name="accessibility_test_pic_pay_logo">Logo da PicPay</string>
+    <string name="accessibility_test_back">Voltar</string>
 </resources>

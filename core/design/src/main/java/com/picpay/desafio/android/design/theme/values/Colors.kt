@@ -9,5 +9,6 @@ class Colors {
         val Accent = Color(color = 0xFF11C76F)
         val PrimaryLight = Color(color = 0xFFACB1BD)
         val Detail = Color(color = 0x80FFFFFF)
+        val PicPay = Color(color = 0xFF21C25E)
     }
 }

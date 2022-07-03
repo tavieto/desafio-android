@@ -8,5 +8,6 @@ data class PicPayColors(
     val primaryDark: Color = Colors.PrimaryDark,
     val accent: Color = Colors.Accent,
     val primaryLight: Color = Colors.PrimaryLight,
-    val detail: Color = Colors.Detail
+    val detail: Color = Colors.Detail,
+    val picPay: Color = Colors.PicPay
 )
