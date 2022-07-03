@@ -1,17 +1,18 @@
 package com.picpay.desafio.android.network.datasource
 
-import com.picpay.desafio.android.commons.base.Either
+import com.picpay.desafio.android.commons.base.Either.Failure
 import com.picpay.desafio.android.commons.base.Either.Success
 import com.picpay.desafio.android.network.core.NetworkWrapper
-import com.picpay.desafio.android.network.factory.ContactsFactory
 import com.picpay.desafio.android.network.factory.ContactsFactory.LIST_CONTACTS_DOMAIN
 import com.picpay.desafio.android.network.factory.ContactsFactory.LIST_CONTACTS_RESPONSE
 import com.picpay.desafio.android.network.service.PicPayService
 import com.picpay.desafio.android.repository.datasource.remote.ContactsRemoteDataSource
-import io.mockk.*
+import io.mockk.MockKAnnotations
+import io.mockk.coEvery
+import io.mockk.coVerify
+import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.koin.core.context.startKoin
@@ -41,7 +42,17 @@ internal class ContactsRemoteDataSourceTest {
         val result = dataSource.getContacts()
 
         coVerify(exactly = 1) { service.getUsers() }
-        assertTrue(result is Success)
-        assertEquals(LIST_CONTACTS_DOMAIN, (result as Success).data)
+        assertEquals(Success(LIST_CONTACTS_DOMAIN), result)
+    }
+
+    @Test
+    fun `WHEN run getContacts() and service has FAILURE MUST throw exception`(): Unit = runBlocking {
+        val throwable = Throwable()
+        coEvery { service.getUsers() } throws throwable
+
+        val result = dataSource.getContacts()
+
+        coVerify(exactly = 1) { service.getUsers() }
+        assertEquals(Failure(throwable), result)
     }
 }
