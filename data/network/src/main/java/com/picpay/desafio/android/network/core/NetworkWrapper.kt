@@ -1,7 +1,5 @@
 package com.picpay.desafio.android.network.core
 
-import com.google.gson.Gson
-import com.picpay.desafio.android.network.data.model.ErrorResponse
 import com.picpay.desafio.android.commons.exception.*
 import retrofit2.Response
 
@@ -26,20 +24,12 @@ class NetworkWrapper {
     }
 
     fun handleException(response: Response<*>): Throwable {
-        val code = response.code()
-        val error: ErrorResponse = Gson().fromJson(
-            response.errorBody()?.charStream(),
-            ErrorResponse::class.java
-        )
-
-        error.run {
-            return when (code) {
-                BAD_REQUEST -> InvalidRequestException(message?.get(0), this.error)
-                NOT_AUTHORIZED -> NotAuthorizedException(message?.get(0), this.error)
-                NOT_FOUND -> NotFoundException(message?.get(0), this.error)
-                TIMEOUT -> TimeOutException(message?.get(0), this.error)
-                else -> UnknownCodeException(message?.get(0), this.error)
-            }
+        return when (response.code()) {
+            BAD_REQUEST -> InvalidRequestException()
+            NOT_AUTHORIZED -> NotAuthorizedException()
+            NOT_FOUND -> NotFoundException()
+            TIMEOUT -> TimeOutException()
+            else -> UnknownCodeException()
         }
     }
 }

@@ -11,14 +11,14 @@ import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
 class ContactsRemoteDataSourceImpl(
-    private val picPayService: PicPayService
+    private val service: PicPayService
 ) : ContactsRemoteDataSource, KoinComponent {
 
     private val networkWrapper: NetworkWrapper by inject()
 
     override suspend fun getContacts(): Either<List<ContactDomain>> = runCatch {
         networkWrapper {
-            picPayService.getUsers()
+            service.getUsers()
         }.map {
             it.toDomain()
         }

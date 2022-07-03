@@ -2,7 +2,7 @@ package com.picpay.desafio.android.network.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class UserResponse(
+data class ContactResponse(
     @SerializedName("id")
     val id: String? = null,
     @SerializedName("name")
