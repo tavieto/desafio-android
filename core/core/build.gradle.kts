@@ -20,10 +20,12 @@ dependencies {
     val compose     = Dependencies.Compose
     val core        = Dependencies.Modules.Core
     val external    = Dependencies.External
+    val test        = Dependencies.Test
 
     api(android.coreKtx)
     api(android.viewModel)
     api(compose.coreUi)
     api(external.koin)
     api(project(core.commons))
+    implementation(test.jUnit)
 }
