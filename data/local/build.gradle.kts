@@ -6,27 +6,30 @@ plugins {
 
 apply("./../../android-common.gradle")
 
+android {
+    defaultConfig {
+        minSdk = 21
+    }
+}
+
 dependencies {
-    val roomVersion = "2.4.2"
-
-    implementation("androidx.room:room-runtime:$roomVersion")
-    annotationProcessor("androidx.room:room-compiler:$roomVersion")
-    // To use Kotlin annotation processing tool (kapt)
-    kapt("androidx.room:room-compiler:$roomVersion")
-    // optional - Kotlin Extensions and Coroutines support for Room
-    implementation("androidx.room:room-ktx:$roomVersion")
-
     val android     = Dependencies.Android
     val external    = Dependencies.External
     val modules     = Dependencies.Modules
+    val test        = Dependencies.Test
+    val androidTest = Dependencies.AndroidTest
 
     implementation(android.coreKtx)
+    implementation(android.roomRuntime)
     implementation(external.koin)
     implementation(external.koinAndroid)
     implementation(project(modules.repository))
+    kapt(android.roomCompiler)
+    androidTestImplementation(test.jUnit)
 
     // optional - Test helpers
-    testImplementation("androidx.room:room-testing:$roomVersion")
-
-
+    testImplementation(test.room)
+    androidTestImplementation("androidx.test:runner:1.4.0")
+    androidTestImplementation("androidx.test:rules:1.4.0")
+    androidTestImplementation(androidTest.jUnit)
 }

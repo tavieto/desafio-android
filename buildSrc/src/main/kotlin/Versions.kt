@@ -1,6 +1,7 @@
 object Versions {
     object Android {
         const val coreKts               = "1.8.0"
+        const val room                  = "2.4.2"
         const val viewModel             = "2.4.1"
     }
     object Compose {
@@ -13,6 +14,7 @@ object Versions {
         const val coroutines            = "1.3.9"
         const val glide                 = "1.5.2"
         const val koin                  = "3.2.0"
+        const val memoryLeak            = "2.9.1"
         const val okHttp                = "4.9.1"
         const val retrofit              = "2.9.0"
     }
@@ -21,5 +23,8 @@ object Versions {
         const val coroutines            = "1.6.0"
         const val mockK                 = "1.12.3"
         const val jUnit                 = "4.13.2"
+    }
+    object AndroidTest {
+        const val jUnit                 = "1.1.3"
     }
 }

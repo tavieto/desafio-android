@@ -39,7 +39,6 @@ dependencies {
     implementation(compose.material)
     implementation(compose.navigation)
     implementation(compose.uiPreview)
-
     implementation(external.koin)
     implementation(external.koinAndroid)
     implementation(external.koinCompose)
@@ -51,9 +50,5 @@ dependencies {
     implementation(project(domain.contact))
     implementation(project(features.contact))
     implementation(project(modules.repository))
-
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test:runner:1.4.0")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-    androidTestImplementation("androidx.test:core-ktx:1.4.0")
+    debugImplementation(external.memoryLeak)
 }
