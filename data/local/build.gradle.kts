@@ -10,6 +10,11 @@ android {
     defaultConfig {
         minSdk = 21
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -23,13 +28,14 @@ dependencies {
     implementation(android.roomRuntime)
     implementation(external.koin)
     implementation(external.koinAndroid)
+    implementation(test.roboletric)
     implementation(project(modules.repository))
     kapt(android.roomCompiler)
     androidTestImplementation(test.jUnit)
 
     // optional - Test helpers
     testImplementation(test.room)
-    androidTestImplementation("androidx.test:runner:1.4.0")
-    androidTestImplementation("androidx.test:rules:1.4.0")
+    androidTestImplementation(androidTest.rules)
+    androidTestImplementation(androidTest.runner)
     androidTestImplementation(androidTest.jUnit)
 }

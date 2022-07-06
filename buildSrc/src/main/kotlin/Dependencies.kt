@@ -54,9 +54,12 @@ object Dependencies {
         const val jUnit                 = "junit:junit:${Versions.Test.jUnit}"
         const val koin                  = "io.insert-koin:koin-test:${Versions.External.koin}"
         const val mockK                 = "io.mockk:mockk:${Versions.Test.mockK}"
+        const val roboletric            = "org.robolectric:robolectric:${Versions.Test.roboletric}"
         const val room                  = "androidx.room:room-testing:${Versions.Android.room}"
     }
     object AndroidTest {
         const val jUnit                 = "androidx.test.ext:junit-ktx:${Versions.AndroidTest.jUnit}"
+        const val rules                 = "androidx.test:rules:${Versions.AndroidTest.rules}"
+        const val runner                = "androidx.test:runner:${Versions.AndroidTest.runner}"
     }
 }

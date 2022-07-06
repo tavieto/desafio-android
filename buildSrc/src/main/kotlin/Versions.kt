@@ -22,9 +22,12 @@ object Versions {
         const val coreTest              = "2.1.0"
         const val coroutines            = "1.6.0"
         const val mockK                 = "1.12.3"
+        const val roboletric            = "4.8"
         const val jUnit                 = "4.13.2"
     }
     object AndroidTest {
         const val jUnit                 = "1.1.3"
+        const val rules                 = "1.4.0"
+        const val runner                = "1.4.0"
     }
 }

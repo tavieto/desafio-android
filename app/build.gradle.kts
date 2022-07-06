@@ -13,6 +13,7 @@ android {
         targetSdk = AppConfig.targetSdk
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
+        signingConfig = signingConfigs.getByName("debug")
     }
 
     buildFeatures {
