@@ -41,25 +41,25 @@ object Dependencies {
             const val local             = ":data:local"
         }
         object Domain {
-            const val contact           = ":domain:contact"
+            const val contact           = ":domain:contacts"
         }
         object Features {
-            const val contact           = ":features:contact"
+            const val contact           = ":features:contacts"
         }
     }
     object Test {
-        const val coreTest              = "androidx.arch.core:core-testing:${Versions.Test.coreTest}"
-        const val coroutinesTest        = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.Test.coroutines}"
-        const val coroutinesAndroid     = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.Test.coroutines}"
+        const val archCoreTesting       = "androidx.arch.core:core-testing:${Versions.Test.coreTest}"
         const val jUnit                 = "junit:junit:${Versions.Test.jUnit}"
         const val koin                  = "io.insert-koin:koin-test:${Versions.External.koin}"
         const val mockK                 = "io.mockk:mockk:${Versions.Test.mockK}"
-        const val roboletric            = "org.robolectric:robolectric:${Versions.Test.roboletric}"
         const val room                  = "androidx.room:room-testing:${Versions.Android.room}"
     }
     object AndroidTest {
+        const val composeUiJUnit4       = "androidx.compose.ui:ui-test-junit4:${Versions.Compose.coreUi}"
+        const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest:${Versions.Compose.coreUi}"
         const val jUnit                 = "androidx.test.ext:junit-ktx:${Versions.AndroidTest.jUnit}"
         const val rules                 = "androidx.test:rules:${Versions.AndroidTest.rules}"
         const val runner                = "androidx.test:runner:${Versions.AndroidTest.runner}"
+        const val testCoreKtx           = "androidx.test:core-ktx:${Versions.AndroidTest.coreTestKtx}"
     }
 }

@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.network.datasource
 
-import com.picpay.desafio.android.contact.data.model.ContactDomain
+import com.picpay.desafio.android.contacts.data.model.ContactDomain
 import com.picpay.desafio.android.network.core.NetworkWrapper
 import com.picpay.desafio.android.network.data.mapper.toDomain
 import com.picpay.desafio.android.network.service.PicPayService

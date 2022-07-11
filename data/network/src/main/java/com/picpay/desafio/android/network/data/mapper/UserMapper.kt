@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.network.data.mapper
 
-import com.picpay.desafio.android.contact.data.model.ContactDomain
+import com.picpay.desafio.android.contacts.data.model.ContactDomain
 import com.picpay.desafio.android.network.data.model.ContactResponse
 
 fun ContactResponse.toDomain() = ContactDomain(

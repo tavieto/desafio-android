@@ -21,9 +21,9 @@
             <option value="$PROJECT_DIR$/data/local" />
             <option value="$PROJECT_DIR$/data/network" />
             <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/domain/contact" />
+            <option value="$PROJECT_DIR$/domain/contacts" />
             <option value="$PROJECT_DIR$/features" />
-            <option value="$PROJECT_DIR$/features/contact" />
+            <option value="$PROJECT_DIR$/features/contacts" />
             <option value="$PROJECT_DIR$/repository" />
           </set>
         </option>

@@ -2,7 +2,7 @@ package com.picpay.desafio.android.repository.repository
 
 import com.picpay.desafio.android.commons.base.Either
 import com.picpay.desafio.android.commons.base.Either.Success
-import com.picpay.desafio.android.contact.repository.ContactsRepository
+import com.picpay.desafio.android.contacts.repository.ContactsRepository
 import com.picpay.desafio.android.repository.datasource.local.ContactsLocalDataSource
 import com.picpay.desafio.android.repository.datasource.remote.ContactsRemoteDataSource
 import com.picpay.desafio.android.repository.factory.ContactsFactory.LIST_CONTACTS

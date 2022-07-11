@@ -3,9 +3,9 @@ package com.picpay.desafio.android.navigation.graph
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.picpay.desafio.android.contact.data.model.Contact
-import com.picpay.desafio.android.contact.ui.ContactScreen
-import com.picpay.desafio.android.contact.ui.Test
+import com.picpay.desafio.android.contacts.data.model.Contact
+import com.picpay.desafio.android.contacts.ui.ContactScreen
+import com.picpay.desafio.android.contacts.ui.Test
 import com.picpay.desafio.android.navigation.destination.Destination
 import com.picpay.desafio.android.navigation.destination.LeafDestination
 import org.koin.androidx.compose.getViewModel

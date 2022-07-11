@@ -28,7 +28,6 @@ dependencies {
     implementation(android.roomRuntime)
     implementation(external.koin)
     implementation(external.koinAndroid)
-    implementation(test.roboletric)
     implementation(project(modules.repository))
     kapt(android.roomCompiler)
     androidTestImplementation(test.jUnit)
