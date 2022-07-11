@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.local.datasource
 
-import com.picpay.desafio.android.contact.data.model.ContactDomain
+import com.picpay.desafio.android.contacts.data.model.ContactDomain
 import com.picpay.desafio.android.local.dao.ContactsDao
 import com.picpay.desafio.android.local.data.mapper.toDomain
 import com.picpay.desafio.android.repository.datasource.local.ContactsLocalDataSource

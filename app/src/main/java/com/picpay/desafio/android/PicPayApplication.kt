@@ -1,8 +1,8 @@
 package com.picpay.desafio.android
 
 import android.app.Application
-import com.picpay.desafio.android.contact.di.domainContactModule
-import com.picpay.desafio.android.contact.di.featureContactModel
+import com.picpay.desafio.android.contacts.di.domainContactModule
+import com.picpay.desafio.android.contacts.di.featureContactModel
 import com.picpay.desafio.android.local.di.localModule
 import com.picpay.desafio.android.network.di.networkModule
 import com.picpay.desafio.android.repository.di.repositoryModule

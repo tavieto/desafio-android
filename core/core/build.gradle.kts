@@ -6,6 +6,14 @@ plugins {
 apply("./../../android-common.gradle")
 
 android {
+    defaultConfig {
+        minSdk = AppConfig.minSdk
+    }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
     buildFeatures {
         compose = true
     }
@@ -21,6 +29,7 @@ dependencies {
     val core        = Dependencies.Modules.Core
     val external    = Dependencies.External
     val test        = Dependencies.Test
+    val androidTest = Dependencies.AndroidTest
 
     api(android.coreKtx)
     api(android.viewModel)
@@ -28,4 +37,8 @@ dependencies {
     api(external.koin)
     api(project(core.commons))
     implementation(test.jUnit)
+    debugImplementation(androidTest.composeUiTestManifest)
+    androidTestImplementation(androidTest.composeUiJUnit4)
+    androidTestImplementation(androidTest.runner)
+    androidTestImplementation(androidTest.testCoreKtx)
 }

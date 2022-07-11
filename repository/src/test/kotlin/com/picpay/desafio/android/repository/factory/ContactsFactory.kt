@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.repository.factory
 
-import com.picpay.desafio.android.contact.data.model.ContactDomain
+import com.picpay.desafio.android.contacts.data.model.ContactDomain
 
 object ContactsFactory {
     val LIST_CONTACTS = listOf(

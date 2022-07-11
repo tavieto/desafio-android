@@ -3,7 +3,7 @@ package com.picpay.desafio.android.navigation.destination
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.navArgument
 import com.google.gson.Gson
-import com.picpay.desafio.android.contact.data.model.Contact
+import com.picpay.desafio.android.contacts.data.model.Contact
 import com.picpay.desafio.android.core.extension.encode
 import com.picpay.desafio.android.navigation.core.ArgNavType
 

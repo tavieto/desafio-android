@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.local.data.mapper
 
-import com.picpay.desafio.android.contact.data.model.ContactDomain
+import com.picpay.desafio.android.contacts.data.model.ContactDomain
 import com.picpay.desafio.android.local.data.model.ContactEntity
 
 fun ContactEntity.toDomain() = ContactDomain(
