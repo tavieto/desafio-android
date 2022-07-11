@@ -1,6 +1,6 @@
 # PicPay - Desafio Android
 
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=tavieto_desafio-android)](https://sonarcloud.io/summary/new_code?id=tavieto_desafio-android)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tavieto_desafio-android&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=tavieto_desafio-android)
 
 <img src="https://github.com/mobilepicpay/desafio-android/blob/master/desafio-picpay.gif" width="300"/>
 
