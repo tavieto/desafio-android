@@ -8,6 +8,9 @@ apply("./../../android-common.gradle")
 
 android {
     defaultConfig {
+        minSdk = AppConfig.minSdk
+    }
+    defaultConfig {
         minSdk = 21
     }
     testOptions {

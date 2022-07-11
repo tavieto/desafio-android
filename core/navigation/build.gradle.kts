@@ -7,6 +7,9 @@ plugins {
 apply("./../../android-common.gradle")
 
 android {
+    defaultConfig {
+        minSdk = AppConfig.minSdk
+    }
     buildFeatures {
         compose = true
     }
